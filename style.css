@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  font-size: 18px;
+}
+
+body {
+  width: 100%;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--main-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 21.875rem;
+  height: 37.1875rem;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5rem;
+  margin: 3rem;
+  box-shadow: 0px 11px 43px -6px rgba(0,0,0,0.33);
+}
+
+.main__image {
+  width: 18.75rem;
+  border-radius: 8px;
+}
+
+.main__text-container {
+  margin: 1.5625rem 0;
+}
+
+.main__text-container h1 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.main__text-container p {
+  color: #8499b6;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5rem;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-bottom: solid 1px var(--line);
+  margin-bottom: 1rem;
+}
+
+.text-container__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-container__info img {
+  height: 21px;
+  margin-right: 0.5rem;
+}
+
+.text-container__info span {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.info__eth {
+  color: #01fffe;
+  display: flex;
+  align-items: center;
+}
+
+.info__days {
+  color: #8499b6;
+  display: flex;
+  align-items: center;
+}
+
+.info__days span {
+  font-weight: 400;
+}
+
+.text-container__author {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.text-container__author img {
+  width: 2rem;
+  border-radius: 50%;
+  outline: 1px solid #fff;
+}
+
+.text-container__author p {
+  color: #8499b6;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+.text-container__author span {
+  color: #fff;
+  font-weight: 400;
+}
