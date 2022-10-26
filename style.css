@@ -7,6 +7,8 @@
 }
 
 :root {
+  --primary: hsl(178, 100%, 50%);
+  --secondary: hsl(215, 51%, 70%);
   --main-bg: hsl(217, 54%, 11%);
   --card-bg: hsl(216, 50%, 16%);
   --line: hsl(215, 32%, 27%);
@@ -37,9 +39,40 @@ main {
   box-shadow: 0px 11px 43px -6px rgba(0,0,0,0.33);
 }
 
-.main__image {
+.main__images {
   width: 18.75rem;
+  height: 18.75rem;
   border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.main__images img {
+  width: 100%;
+}
+
+.main__images--overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, .5);
+  transform: translateY(100%);
+  transition: all .3s;
+}
+
+.main__images--overlay img {
+  position: absolute;
+  width: 3.125rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main__images:hover .main__images--overlay {
+  cursor: pointer;
+  transform: translateY(0);
 }
 
 .main__text-container {
@@ -50,10 +83,16 @@ main {
   color: #fff;
   font-size: 1.5rem;
   margin-bottom: 1.25rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.main__text-container h1:hover {
+  color: var(--primary);
 }
 
 .main__text-container p {
-  color: #8499b6;
+  color: var(--secondary);
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   line-height: 1.5rem;
@@ -83,13 +122,13 @@ hr {
 }
 
 .info__eth {
-  color: #01fffe;
+  color: var(--primary);
   display: flex;
   align-items: center;
 }
 
 .info__days {
-  color: #8499b6;
+  color: var(--secondary);
   display: flex;
   align-items: center;
 }
@@ -112,7 +151,7 @@ hr {
 }
 
 .text-container__author p {
-  color: #8499b6;
+  color: var(--secondary);
   font-weight: 300;
   font-size: 1.1rem;
 }
@@ -120,4 +159,10 @@ hr {
 .text-container__author span {
   color: #fff;
   font-weight: 400;
+  cursor: pointer;
+}
+
+.text-container__author span:hover {
+  color: var(--primary);
+  transition: .3s;
 }
